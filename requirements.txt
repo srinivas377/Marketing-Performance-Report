@@ -1,0 +1,6 @@
+pandas>=2.0
+numpy>=1.26
+Jinja2>=3.1
+python-dotenv>=1.0
+anthropic>=0.40      # Claude API (default provider)
+openai>=1.50         # OpenAI, Gemini (OpenAI-compatible endpoint) and Grok

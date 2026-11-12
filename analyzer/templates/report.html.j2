@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marketing Performance Report</title>
+<style>
+  :root { --bg:#f6f7f9; --card:#fff; --ink:#1c2430; --muted:#5d6b7c; --line:#e3e7ed;
+          --high:#c0392b; --med:#d98a00; --low:#2c7be5; --good:#1f8a4c; --accent:#2b4a7a; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  .wrap { max-width:1080px; margin:0 auto; padding:28px 20px 60px; }
+  h1 { margin:0 0 4px; font-size:26px; }
+  h2 { margin:38px 0 12px; font-size:19px; border-bottom:2px solid var(--line); padding-bottom:6px; }
+  h3 { margin:0 0 4px; font-size:16px; }
+  .sub { color:var(--muted); font-size:13px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px 18px; margin-bottom:12px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; }
+  .kpi { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px 14px; }
+  .kpi .v { font-size:22px; font-weight:650; }
+  .kpi .l { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+  .badge { display:inline-block; padding:1px 9px; border-radius:999px; color:#fff; font-size:12px; font-weight:600; margin-right:6px; vertical-align:1px; }
+  .P1 { background:var(--high); } .P2 { background:var(--med); } .P3 { background:var(--low); }
+  .tag { display:inline-block; background:#eef2f7; color:#34445a; border-radius:6px; padding:0 7px; font-size:12px; margin:1px 3px 1px 0; }
+  .tag.warn { background:#fdecea; color:#9c2a1f; } .tag.ok { background:#e6f4ec; color:#16703c; }
+  .banner { border-radius:10px; padding:12px 16px; margin:14px 0; font-size:14px; }
+  .banner.warn { background:#fff4e0; border:1px solid #f0cf8a; }
+  .banner.ai { background:#eaf1fb; border:1px solid #c5d8f3; }
+  table { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--line); border-radius:10px; overflow:hidden; font-size:13.5px; }
+  th,td { padding:8px 10px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { background:#f0f3f7; font-size:12px; text-transform:uppercase; letter-spacing:.03em; color:var(--muted); }
+  td.n, th.n { text-align:right; font-variant-numeric:tabular-nums; }
+  tr:last-child td { border-bottom:none; }
+  .bar { height:8px; background:#e8edf3; border-radius:4px; min-width:70px; }
+  .bar > span { display:block; height:100%; border-radius:4px; background:var(--accent); }
+  .bar.bad > span { background:var(--high); } .bar.good > span { background:var(--good); }
+  .why { color:var(--muted); font-size:13.5px; margin-top:4px; }
+  ul.ent { margin:8px 0 0; padding-left:18px; color:#34445a; font-size:13px; }
+  .good { color:var(--good); font-weight:600; } .bad { color:var(--high); font-weight:600; }
+  details { margin-top:10px; } summary { cursor:pointer; color:var(--accent); font-size:13px; }
+  .meta { font-size:12px; color:var(--muted); }
+  @media print { body { background:#fff; } .card,.kpi,table { break-inside:avoid; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Marketing Performance Report</h1>
+<div class="sub">Generated {{ r.meta.generated_at }} · data version {{ r.meta.data_version }} · files: {{ r.meta.files.seo }}, {{ r.meta.files.ads }}</div>
+
+{% if r.ai.source == 'llm' %}
+<div class="banner ai">Recommendations written by <b>{{ r.ai.provider }}</b> ({{ r.ai.model }}) from the analysis below. All numbers are calculated by the application from your CSV files.</div>
+{% else %}
+<div class="banner warn"><b>AI recommendations were not generated for this report.</b> {{ r.ai.error }} The actions below are the rule-based suggestions from the analysis instead.</div>
+{% endif %}
+
+<h2>Executive summary</h2>
+<div class="card">{{ r.executive_summary }}</div>
+
+{% set st = r.seo_summary.totals %}{% set at = r.ads_summary.totals %}
+<div class="grid">
+  <div class="kpi"><div class="l">Organic impressions</div><div class="v">{{ st.impressions|num }}</div></div>
+  <div class="kpi"><div class="l">Organic clicks</div><div class="v">{{ st.clicks|num }}</div></div>
+  <div class="kpi"><div class="l">Organic CTR</div><div class="v">{{ st.ctr|pct(2) }}</div></div>
+  <div class="kpi"><div class="l">Avg. position</div><div class="v">{{ st.avg_position|num(1) }}</div></div>
+  <div class="kpi"><div class="l">Ad spend</div><div class="v">{{ at.spend|usd }}</div></div>
+  <div class="kpi"><div class="l">Ad revenue</div><div class="v">{{ at.revenue|usd }}</div></div>
+  <div class="kpi"><div class="l">Blended ROAS</div><div class="v">{{ at.roas|x }}</div></div>
+  <div class="kpi"><div class="l">Cost / purchase</div><div class="v">{{ at.cpa|usd }}</div></div>
+</div>
+<div class="meta" style="margin-top:8px">ROAS = revenue ÷ ad spend. CTR = clicks ÷ impressions. Organic figures cover 28 days.</div>
+
+{% if r.changes_since_previous %}
+<h2>What changed since the previous data</h2>
+<table>
+  <tr><th>Metric</th><th class="n">Previous</th><th class="n">Now</th><th class="n">Change</th></tr>
+  {% for c in r.changes_since_previous.rows %}
+  <tr>
+    <td>{{ c.metric }}</td>
+    {% if c.metric == 'Organic CTR' %}
+      <td class="n">{{ c.previous|pct(2) }}</td><td class="n">{{ c.current|pct(2) }}</td>
+    {% elif c.metric == 'Blended ROAS' %}
+      <td class="n">{{ c.previous|x }}</td><td class="n">{{ c.current|x }}</td>
+    {% elif c.metric in ('Ad spend','Ad revenue') %}
+      <td class="n">{{ c.previous|usd }}</td><td class="n">{{ c.current|usd }}</td>
+    {% else %}
+      <td class="n">{{ c.previous|num }}</td><td class="n">{{ c.current|num }}</td>
+    {% endif %}
+    <td class="n {{ c.direction or '' }}">{{ c.change_pct|signed }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endif %}
+
+<h2>Recommended actions (by priority · {{ r.recommendations|length }})</h2>
+{% for rec in r.recommendations %}
+<div class="card">
+  <h3><span class="badge {{ rec.priority }}">{{ rec.priority }}</span>{{ rec.title }}</h3>
+  <div>{{ rec.action }}</div>
+  {% if rec.why %}<div class="why"><b>Why:</b> {{ rec.why }}</div>{% endif %}
+  {% if rec.expected_impact %}<div class="why"><b>Expected impact:</b> {{ rec.expected_impact }}</div>{% endif %}
+  <div class="meta" style="margin-top:6px">Effort: {{ rec.effort }}{% if rec.related_findings %} · Based on: {{ rec.related_findings|join(', ') }}{% endif %}</div>
+</div>
+{% endfor %}
+<div class="meta">P1 = this week · P2 = this month · P3 = when time allows</div>
+
+<h2>Key performance issues ({{ r.issues|length }})</h2>
+{% for f in r.issues %}
+<div class="card">
+  <h3><span class="badge {{ f.priority }}">{{ f.priority }}</span>{{ f.title }} <span class="tag">{{ f.id }}</span><span class="tag">{{ f.area }}</span></h3>
+  <div>{{ f.detail }}</div>
+  {% if f.value_usd %}<div class="why">Estimated revenue at stake: <b>{{ f.value_usd|usd }}</b> (modelled)</div>{% endif %}
+  <div class="why"><b>First step:</b> {{ f.suggested_action }}</div>
+  {% if f.entities_text %}<details><summary>Affected items ({{ f.entities_text|length }})</summary><ul class="ent">{% for t in f.entities_text %}<li>{{ t }}</li>{% endfor %}</ul></details>{% endif %}
+</div>
+{% else %}<div class="card">No issues detected.</div>{% endfor %}
+
+<h2>Growth &amp; optimisation opportunities ({{ r.opportunities|length }})</h2>
+{% for f in r.opportunities %}
+<div class="card">
+  <h3><span class="badge {{ f.priority }}">{{ f.priority }}</span>{{ f.title }} <span class="tag">{{ f.id }}</span><span class="tag">{{ f.area }}</span></h3>
+  <div>{{ f.detail }}</div>
+  {% if f.value_usd %}<div class="why">Estimated upside: <b>{{ f.value_usd|usd }}</b> (modelled)</div>{% endif %}
+  <div class="why"><b>First step:</b> {{ f.suggested_action }}</div>
+  {% if f.entities_text %}<details><summary>Details ({{ f.entities_text|length }})</summary><ul class="ent">{% for t in f.entities_text %}<li>{{ t }}</li>{% endfor %}</ul></details>{% endif %}
+</div>
+{% else %}<div class="card">No opportunities detected.</div>{% endfor %}
+<div class="meta">Revenue estimates are modelled, can overlap between findings, and should not be added together.</div>
+
+<h2>SEO performance</h2>
+<div class="grid" style="margin-bottom:12px">
+  <div class="kpi"><div class="l">Pages analysed</div><div class="v">{{ st.pages }}</div></div>
+  <div class="kpi"><div class="l">Indexed / not indexed</div><div class="v">{{ st.indexed_pages }} / {{ st.not_indexed_pages }}</div></div>
+  <div class="kpi"><div class="l">Impressions on page 2+</div><div class="v">{{ st.page2_impression_share|pct(0) }}</div></div>
+  <div class="kpi"><div class="l">Missing descriptions</div><div class="v">{{ st.missing_descriptions }}</div></div>
+</div>
+<table>
+  <tr><th>Category</th><th class="n">Pages</th><th class="n">Impressions</th><th class="n">Clicks</th><th class="n">CTR</th><th class="n">Avg. position</th></tr>
+  {% for c in r.seo_summary.by_category %}
+  <tr><td>{{ c.category }}</td><td class="n">{{ c.pages }}</td><td class="n">{{ c.impressions|num }}</td><td class="n">{{ c.clicks|num }}</td><td class="n">{{ c.ctr|pct(2) }}</td><td class="n">{{ c.avg_position|num(1) }}</td></tr>
+  {% endfor %}
+</table>
+<div style="height:12px"></div>
+<table>
+  <tr><th>Page</th><th class="n">Impr.</th><th class="n">Clicks</th><th class="n">CTR</th><th class="n">Pos.</th><th>Flags</th></tr>
+  {% for p in r.seo_summary.pages %}
+  <tr>
+    <td>{{ p.product_name }} <span class="meta">{{ p.product_id }}</span>{% if p.url_slug %}<div class="meta">/{{ p.url_slug }}</div>{% endif %}</td>
+    <td class="n">{{ p.impressions|num }}</td><td class="n">{{ p.clicks|num }}</td>
+    <td class="n">{{ p.ctr|pct(2) }}</td><td class="n">{{ p.avg_position|num(1) }}</td>
+    <td>{% for fl in p.flags %}<span class="tag warn">{{ fl }}</span>{% else %}<span class="tag ok">OK</span>{% endfor %}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<h2>Advertising performance</h2>
+{% set maxroas = (r.ads_summary.campaigns|map(attribute='roas')|select|list|max) or 1 %}
+<table>
+  <tr><th>Campaign</th><th class="n">Spend</th><th class="n">Revenue</th><th class="n">Purch.</th><th class="n">CPA</th><th class="n">Conv. rate</th><th class="n">CTR</th><th class="n">Freq.</th><th style="width:120px">ROAS</th><th>Flags</th></tr>
+  {% for c in r.ads_summary.campaigns %}
+  <tr>
+    <td>{{ c.campaign }}<div class="meta">{{ c.platform }} · {{ c.campaign_type }}</div></td>
+    <td class="n">{{ c.spend|usd }}</td><td class="n">{{ c.revenue|usd }}</td><td class="n">{{ c.purchases|num }}</td>
+    <td class="n">{{ c.cpa|usd }}</td><td class="n">{{ c.cvr|pct(2) }}</td>
+    <td class="n">{{ c.ctr|pct(2) }}</td><td class="n">{{ c.frequency|num(1) }}</td>
+    <td>{{ c.roas|x }}
+      {% if c.roas is not none %}<div class="bar {{ 'bad' if c.roas < r.assumptions.thresholds.target_roas else 'good' }}"><span style="width:{{ [100, (c.roas / maxroas * 100)]|min }}%"></span></div>{% endif %}</td>
+    <td>{% for fl in c.flags %}<span class="tag {{ 'ok' if fl == 'Scale candidate' else ('' if fl.startswith('Branded') else 'warn') }}">{{ fl }}</span>{% endfor %}</td>
+  </tr>
+  {% endfor %}
+</table>
+<div style="height:12px"></div>
+<table>
+  <tr><th>Platform</th><th class="n">Campaigns</th><th class="n">Spend</th><th class="n">Revenue</th><th class="n">ROAS</th><th class="n">Cost/purchase</th></tr>
+  {% for p in r.ads_summary.by_platform %}
+  <tr><td>{{ p.platform }}</td><td class="n">{{ p.campaigns }}</td><td class="n">{{ p.spend|usd }}</td><td class="n">{{ p.revenue|usd }}</td><td class="n">{{ p.roas|x }}</td><td class="n">{{ p.cpa|usd }}</td></tr>
+  {% endfor %}
+</table>
+<div style="height:12px"></div>
+<table>
+  <tr><th>Campaign type</th><th class="n">Campaigns</th><th class="n">Spend</th><th class="n">Revenue</th><th class="n">Conv. rate</th><th class="n">ROAS</th><th class="n">Cost/purchase</th></tr>
+  {% for t in r.ads_summary.by_campaign_type %}
+  <tr><td>{{ t.campaign_type }}</td><td class="n">{{ t.campaigns }}</td><td class="n">{{ t.spend|usd }}</td><td class="n">{{ t.revenue|usd }}</td><td class="n">{{ t.cvr|pct(2) }}</td><td class="n">{{ t.roas|x }}</td><td class="n">{{ t.cpa|usd }}</td></tr>
+  {% endfor %}
+</table>
+<div class="meta" style="margin-top:6px">Target ROAS: {{ r.assumptions.thresholds.target_roas|num(1) }}× · Non-brand average ROAS: {{ r.ads_summary.benchmarks.non_brand_roas|x }} (branded search is excluded because it mostly captures existing demand).</div>
+
+<h2>Data quality</h2>
+{% set notes = r.data_quality.seo + r.data_quality.ads %}
+{% if notes %}<div class="card"><ul style="margin:0;padding-left:18px">{% for n in notes %}<li>{{ n }}</li>{% endfor %}</ul></div>
+{% else %}<div class="card">No data problems found: every row was valid and used.</div>{% endif %}
+
+<h2>Methodology &amp; assumptions</h2>
+<div class="card">
+  <p style="margin-top:0">Every figure comes from your two CSV files. The rules below are judgement calls that can be changed in <code>analyzer/config.py</code>.</p>
+  <ul>
+    <li>Target ROAS {{ r.assumptions.thresholds.target_roas|num(1) }}×; a campaign is "weak" if it is below target, or well below the non-brand average with a large budget share (≥ {{ (r.assumptions.thresholds.high_spend_share * 100)|round|int }}%).</li>
+    <li>Organic CTR is compared with a benchmark CTR for each ranking position (an assumption, not your own data).</li>
+    <li>"Page 2" pages are those at positions {{ r.assumptions.thresholds.striking_min_pos|num(0) }}–{{ r.assumptions.thresholds.striking_max_pos|num(0) }} with at least {{ r.assumptions.thresholds.min_impressions|num }} impressions.</li>
+    <li>An organic click is valued at {{ (r.assumptions.thresholds.organic_value_factor * 100)|round|int }}% of an average paid click ({{ r.assumptions.organic_click_value_usd|usd }}), and only half of any modelled gain is counted.</li>
+    <li>Trends compare this run with the previous run on different data; the CSVs themselves contain no dates.</li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>

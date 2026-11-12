@@ -1,0 +1,13 @@
+product_id,product_name,category,url_slug,description,impressions_28d,clicks_28d,avg_position,indexed,page_load_ms
+P-101,Black Mermaid Prom Dress,Prom Dresses,black-mermaid-prom-dress,Black off-shoulder mermaid prom dress with a fitted silhouette.,52000,410,11.8,True,68
+P-102,Red Satin Evening Gown,Evening Dresses,red-satin-evening-gown,Red satin evening gown with a floor-length skirt.,31800,954,4.3,True,54
+P-103,Blue Cocktail Dress,Cocktail Dresses,blue-cocktail-dress,,21400,107,17.6,True,91
+P-104,Navy Formal Dress,Formal Dresses,navy-formal-dress,Navy formal dress for weddings and special occasions.,12600,189,8.9,False,73
+P-105,Sequin Party Gown,Party Dresses,sequin-party-gown,Silver sequin party gown with a fitted waist.,9800,392,6.1,True,49
+P-106,Floral Maxi Dress,Maxi Dresses,floral-maxi-dress,Floral print maxi dress with a flowing skirt.,7600,152,14.2,True,82
+P-107,Black Off Shoulder Gown,Prom Dresses,black-off-shoulder-gown,Elegant black off-shoulder gown for prom.,44000,308,13.1,True,62
+P-108,Champagne Bridesmaid Dress,Bridesmaid Dresses,champagne-bridesmaid-dress,Champagne chiffon bridesmaid dress.,15300,765,3.8,True,57
+P-109,Green Satin Midi Dress,Cocktail Dresses,green-satin-midi-dress,Green satin midi dress for evening events.,8900,267,7.4,True,46
+P-110,Long Sleeve Evening Dress,Evening Dresses,long-sleeve-evening-dress,,18100,181,19.3,False,96
+P-111,Rose Gold Prom Dress,Prom Dresses,rose-gold-prom-dress,Rose gold prom dress with embellished bodice.,27300,819,5.6,True,51
+P-112,Ivory Formal Gown,Formal Dresses,ivory-formal-gown,Ivory formal gown with a floor-length silhouette.,6100,61,22.4,True,88

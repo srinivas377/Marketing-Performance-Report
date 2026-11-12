@@ -1,0 +1,1293 @@
+{
+  "meta": {
+    "generated_at": "2026-11-12T09:23:55+00:00",
+    "data_version": "97046251478f",
+    "files": {
+      "seo": "seo_data.csv",
+      "ads": "ads_data.csv"
+    },
+    "tool_version": "1.0.0"
+  },
+  "executive_summary": "Overall store performance is healthy, generating $32,230 in ad revenue at a 4.82× ROAS (Return On Ad Spend), well above the 3.0× target. However, the single biggest problem is underperforming spend in campaigns like Meta - Prospecting ($950 spend at 2.20× ROAS) and Google Performance Max ($1,120 spend at 3.25× ROAS). The biggest opportunity lies in fixing high-impression organic search pages stuck on page 2—such as the Black Mermaid Prom Dress (P-101) with 52,000 impressions—and boosting low click-through rates on top-ranking products like the Red Satin Evening Gown (P-102).",
+  "ai": {
+    "source": "llm",
+    "provider": "gemini",
+    "model": "gemini-flash-lite-latest",
+    "error": null
+  },
+  "seo_summary": {
+    "totals": {
+      "pages": 12,
+      "impressions": 254900.0,
+      "clicks": 4605.0,
+      "ctr": 0.0181,
+      "avg_position": 10.7731,
+      "page2_impression_share": 0.5853,
+      "indexed_pages": 10,
+      "not_indexed_pages": 2,
+      "missing_descriptions": 2,
+      "avg_load_ms": 68.0833,
+      "load_vs_position_corr": 0.8886
+    },
+    "by_category": [
+      {
+        "category": "Prom Dresses",
+        "pages": 3,
+        "impressions": 123300.0,
+        "clicks": 1537.0,
+        "ctr": 0.0125,
+        "avg_position": 10.8912
+      },
+      {
+        "category": "Evening Dresses",
+        "pages": 2,
+        "impressions": 49900.0,
+        "clicks": 1135.0,
+        "ctr": 0.0227,
+        "avg_position": 9.7409
+      },
+      {
+        "category": "Cocktail Dresses",
+        "pages": 2,
+        "impressions": 30300.0,
+        "clicks": 374.0,
+        "ctr": 0.0123,
+        "avg_position": 14.604
+      },
+      {
+        "category": "Formal Dresses",
+        "pages": 2,
+        "impressions": 18700.0,
+        "clicks": 250.0,
+        "ctr": 0.0134,
+        "avg_position": 13.3037
+      },
+      {
+        "category": "Bridesmaid Dresses",
+        "pages": 1,
+        "impressions": 15300.0,
+        "clicks": 765.0,
+        "ctr": 0.05,
+        "avg_position": 3.8
+      },
+      {
+        "category": "Party Dresses",
+        "pages": 1,
+        "impressions": 9800.0,
+        "clicks": 392.0,
+        "ctr": 0.04,
+        "avg_position": 6.1
+      },
+      {
+        "category": "Maxi Dresses",
+        "pages": 1,
+        "impressions": 7600.0,
+        "clicks": 152.0,
+        "ctr": 0.02,
+        "avg_position": 14.2
+      }
+    ],
+    "pages": [
+      {
+        "product_id": "P-101",
+        "product_name": "Black Mermaid Prom Dress",
+        "category": "Prom Dresses",
+        "url_slug": "black-mermaid-prom-dress",
+        "impressions": 52000.0,
+        "clicks": 410.0,
+        "ctr": 0.0079,
+        "expected_ctr": 0.0177,
+        "avg_position": 11.8,
+        "indexed": true,
+        "page_load_ms": 68,
+        "flags": [
+          "Page 2 – ranking upside"
+        ]
+      },
+      {
+        "product_id": "P-107",
+        "product_name": "Black Off Shoulder Gown",
+        "category": "Prom Dresses",
+        "url_slug": "black-off-shoulder-gown",
+        "impressions": 44000.0,
+        "clicks": 308.0,
+        "ctr": 0.007,
+        "expected_ctr": 0.0146,
+        "avg_position": 13.1,
+        "indexed": true,
+        "page_load_ms": 62,
+        "flags": [
+          "Page 2 – ranking upside"
+        ]
+      },
+      {
+        "product_id": "P-102",
+        "product_name": "Red Satin Evening Gown",
+        "category": "Evening Dresses",
+        "url_slug": "red-satin-evening-gown",
+        "impressions": 31800.0,
+        "clicks": 954.0,
+        "ctr": 0.03,
+        "expected_ctr": 0.0755,
+        "avg_position": 4.3,
+        "indexed": true,
+        "page_load_ms": 54,
+        "flags": [
+          "Low CTR for rank"
+        ]
+      },
+      {
+        "product_id": "P-111",
+        "product_name": "Rose Gold Prom Dress",
+        "category": "Prom Dresses",
+        "url_slug": "rose-gold-prom-dress",
+        "impressions": 27300.0,
+        "clicks": 819.0,
+        "ctr": 0.03,
+        "expected_ctr": 0.056,
+        "avg_position": 5.6,
+        "indexed": true,
+        "page_load_ms": 51,
+        "flags": [
+          "Low CTR for rank"
+        ]
+      },
+      {
+        "product_id": "P-103",
+        "product_name": "Blue Cocktail Dress",
+        "category": "Cocktail Dresses",
+        "url_slug": "blue-cocktail-dress",
+        "impressions": 21400.0,
+        "clicks": 107.0,
+        "ctr": 0.005,
+        "expected_ctr": 0.0079,
+        "avg_position": 17.6,
+        "indexed": true,
+        "page_load_ms": 91,
+        "flags": [
+          "No description",
+          "Page 2 – ranking upside",
+          "Slow page"
+        ]
+      },
+      {
+        "product_id": "P-110",
+        "product_name": "Long Sleeve Evening Dress",
+        "category": "Evening Dresses",
+        "url_slug": "long-sleeve-evening-dress",
+        "impressions": 18100.0,
+        "clicks": 181.0,
+        "ctr": 0.01,
+        "expected_ctr": 0.0066,
+        "avg_position": 19.3,
+        "indexed": false,
+        "page_load_ms": 96,
+        "flags": [
+          "Not indexed",
+          "No description",
+          "Slow page"
+        ]
+      },
+      {
+        "product_id": "P-108",
+        "product_name": "Champagne Bridesmaid Dress",
+        "category": "Bridesmaid Dresses",
+        "url_slug": "champagne-bridesmaid-dress",
+        "impressions": 15300.0,
+        "clicks": 765.0,
+        "ctr": 0.05,
+        "expected_ctr": 0.086,
+        "avg_position": 3.8,
+        "indexed": true,
+        "page_load_ms": 57,
+        "flags": [
+          "Low CTR for rank"
+        ]
+      },
+      {
+        "product_id": "P-104",
+        "product_name": "Navy Formal Dress",
+        "category": "Formal Dresses",
+        "url_slug": "navy-formal-dress",
+        "impressions": 12600.0,
+        "clicks": 189.0,
+        "ctr": 0.015,
+        "expected_ctr": 0.0275,
+        "avg_position": 8.9,
+        "indexed": false,
+        "page_load_ms": 73,
+        "flags": [
+          "Not indexed"
+        ]
+      },
+      {
+        "product_id": "P-105",
+        "product_name": "Sequin Party Gown",
+        "category": "Party Dresses",
+        "url_slug": "sequin-party-gown",
+        "impressions": 9800.0,
+        "clicks": 392.0,
+        "ctr": 0.04,
+        "expected_ctr": 0.049,
+        "avg_position": 6.1,
+        "indexed": true,
+        "page_load_ms": 49,
+        "flags": []
+      },
+      {
+        "product_id": "P-109",
+        "product_name": "Green Satin Midi Dress",
+        "category": "Cocktail Dresses",
+        "url_slug": "green-satin-midi-dress",
+        "impressions": 8900.0,
+        "clicks": 267.0,
+        "ctr": 0.03,
+        "expected_ctr": 0.0368,
+        "avg_position": 7.4,
+        "indexed": true,
+        "page_load_ms": 46,
+        "flags": []
+      },
+      {
+        "product_id": "P-106",
+        "product_name": "Floral Maxi Dress",
+        "category": "Maxi Dresses",
+        "url_slug": "floral-maxi-dress",
+        "impressions": 7600.0,
+        "clicks": 152.0,
+        "ctr": 0.02,
+        "expected_ctr": 0.0119,
+        "avg_position": 14.2,
+        "indexed": true,
+        "page_load_ms": 82,
+        "flags": [
+          "Page 2 – ranking upside",
+          "Slow page"
+        ]
+      },
+      {
+        "product_id": "P-112",
+        "product_name": "Ivory Formal Gown",
+        "category": "Formal Dresses",
+        "url_slug": "ivory-formal-gown",
+        "impressions": 6100.0,
+        "clicks": 61.0,
+        "ctr": 0.01,
+        "expected_ctr": 0.0053,
+        "avg_position": 22.4,
+        "indexed": true,
+        "page_load_ms": 88,
+        "flags": [
+          "Slow page"
+        ]
+      }
+    ]
+  },
+  "ads_summary": {
+    "totals": {
+      "spend": 6680.0,
+      "revenue": 32230.0,
+      "purchases": 286.0,
+      "clicks": 14180.0,
+      "impressions": 872000.0,
+      "roas": 4.8249,
+      "cpa": 23.3566,
+      "cvr": 0.0202,
+      "ctr": 0.0163,
+      "cpc": 0.4711,
+      "aov": 112.6923,
+      "campaigns": 10,
+      "revenue_per_click": 2.2729
+    },
+    "benchmarks": {
+      "target_roas": 3.0,
+      "non_brand_roas": 4.1102,
+      "non_brand_cvr": 0.018
+    },
+    "by_platform": [
+      {
+        "platform": "Google",
+        "campaigns": 5,
+        "spend": 3350.0,
+        "revenue": 17520.0,
+        "purchases": 143.0,
+        "clicks": 6900.0,
+        "impressions": 344000.0,
+        "roas": 5.2299,
+        "cpa": 23.4266,
+        "cvr": 0.0207,
+        "ctr": 0.0201,
+        "cpc": 0.4855,
+        "aov": 122.5175
+      },
+      {
+        "platform": "Meta",
+        "campaigns": 5,
+        "spend": 3330.0,
+        "revenue": 14710.0,
+        "purchases": 143.0,
+        "clicks": 7280.0,
+        "impressions": 528000.0,
+        "roas": 4.4174,
+        "cpa": 23.2867,
+        "cvr": 0.0196,
+        "ctr": 0.0138,
+        "cpc": 0.4574,
+        "aov": 102.8671
+      }
+    ],
+    "by_campaign_type": [
+      {
+        "campaign_type": "Prospecting",
+        "campaigns": 4,
+        "spend": 2920.0,
+        "revenue": 11430.0,
+        "purchases": 102.0,
+        "clicks": 6460.0,
+        "impressions": 476000.0,
+        "roas": 3.9144,
+        "cpa": 28.6275,
+        "cvr": 0.0158,
+        "ctr": 0.0136,
+        "cpc": 0.452,
+        "aov": 112.0588
+      },
+      {
+        "campaign_type": "Search",
+        "campaigns": 3,
+        "spend": 1350.0,
+        "revenue": 11020.0,
+        "purchases": 93.0,
+        "clicks": 2900.0,
+        "impressions": 102500.0,
+        "roas": 8.163,
+        "cpa": 14.5161,
+        "cvr": 0.0321,
+        "ctr": 0.0283,
+        "cpc": 0.4655,
+        "aov": 118.4946
+      },
+      {
+        "campaign_type": "Performance Max",
+        "campaigns": 1,
+        "spend": 1120.0,
+        "revenue": 3640.0,
+        "purchases": 28.0,
+        "clicks": 2240.0,
+        "impressions": 168000.0,
+        "roas": 3.25,
+        "cpa": 40.0,
+        "cvr": 0.0125,
+        "ctr": 0.0133,
+        "cpc": 0.5,
+        "aov": 130.0
+      },
+      {
+        "campaign_type": "Shopping",
+        "campaigns": 1,
+        "spend": 880.0,
+        "revenue": 2860.0,
+        "purchases": 22.0,
+        "clicks": 1760.0,
+        "impressions": 73500.0,
+        "roas": 3.25,
+        "cpa": 40.0,
+        "cvr": 0.0125,
+        "ctr": 0.0239,
+        "cpc": 0.5,
+        "aov": 130.0
+      },
+      {
+        "campaign_type": "Retargeting",
+        "campaigns": 1,
+        "spend": 410.0,
+        "revenue": 3280.0,
+        "purchases": 41.0,
+        "clicks": 820.0,
+        "impressions": 52000.0,
+        "roas": 8.0,
+        "cpa": 10.0,
+        "cvr": 0.05,
+        "ctr": 0.0158,
+        "cpc": 0.5,
+        "aov": 80.0
+      }
+    ],
+    "campaigns": [
+      {
+        "campaign": "Google Performance Max",
+        "platform": "Google",
+        "campaign_type": "Performance Max",
+        "spend": 1120.0,
+        "revenue": 3640.0,
+        "purchases": 28.0,
+        "clicks": 2240.0,
+        "impressions": 168000.0,
+        "reach": 7600.0,
+        "is_brand": false,
+        "roas": 3.25,
+        "cpa": 40.0,
+        "cvr": 0.0125,
+        "ctr": 0.0133,
+        "cpc": 0.5,
+        "aov": 130.0,
+        "frequency": 22.1053,
+        "spend_share": 0.1677,
+        "flags": [
+          "High spend, weak conversion"
+        ]
+      },
+      {
+        "campaign": "Meta - Prospecting",
+        "platform": "Meta",
+        "campaign_type": "Prospecting",
+        "spend": 950.0,
+        "revenue": 2090.0,
+        "purchases": 19.0,
+        "clicks": 1900.0,
+        "impressions": 146000.0,
+        "reach": 8200.0,
+        "is_brand": false,
+        "roas": 2.2,
+        "cpa": 50.0,
+        "cvr": 0.01,
+        "ctr": 0.013,
+        "cpc": 0.5,
+        "aov": 110.0,
+        "frequency": 17.8049,
+        "spend_share": 0.1422,
+        "flags": [
+          "Below target ROAS",
+          "Well below average ROAS",
+          "High spend, weak conversion"
+        ]
+      },
+      {
+        "campaign": "Google Shopping - Dresses",
+        "platform": "Google",
+        "campaign_type": "Shopping",
+        "spend": 880.0,
+        "revenue": 2860.0,
+        "purchases": 22.0,
+        "clicks": 1760.0,
+        "impressions": 73500.0,
+        "reach": 3900.0,
+        "is_brand": false,
+        "roas": 3.25,
+        "cpa": 40.0,
+        "cvr": 0.0125,
+        "ctr": 0.0239,
+        "cpc": 0.5,
+        "aov": 130.0,
+        "frequency": 18.8462,
+        "spend_share": 0.1317,
+        "flags": [
+          "High spend, weak conversion"
+        ]
+      },
+      {
+        "campaign": "Meta - Lookalike",
+        "platform": "Meta",
+        "campaign_type": "Prospecting",
+        "spend": 730.0,
+        "revenue": 2520.0,
+        "purchases": 21.0,
+        "clicks": 1460.0,
+        "impressions": 112000.0,
+        "reach": 6100.0,
+        "is_brand": false,
+        "roas": 3.4521,
+        "cpa": 34.7619,
+        "cvr": 0.0144,
+        "ctr": 0.013,
+        "cpc": 0.5,
+        "aov": 120.0,
+        "frequency": 18.3607,
+        "spend_share": 0.1093,
+        "flags": []
+      },
+      {
+        "campaign": "Meta - Sale Creative",
+        "platform": "Meta",
+        "campaign_type": "Prospecting",
+        "spend": 680.0,
+        "revenue": 3740.0,
+        "purchases": 34.0,
+        "clicks": 1700.0,
+        "impressions": 121000.0,
+        "reach": 6900.0,
+        "is_brand": false,
+        "roas": 5.5,
+        "cpa": 20.0,
+        "cvr": 0.02,
+        "ctr": 0.014,
+        "cpc": 0.4,
+        "aov": 110.0,
+        "frequency": 17.5362,
+        "spend_share": 0.1018,
+        "flags": [
+          "Scale candidate"
+        ]
+      },
+      {
+        "campaign": "Google Search - Prom",
+        "platform": "Google",
+        "campaign_type": "Search",
+        "spend": 620.0,
+        "revenue": 3720.0,
+        "purchases": 31.0,
+        "clicks": 1240.0,
+        "impressions": 48000.0,
+        "reach": 2100.0,
+        "is_brand": false,
+        "roas": 6.0,
+        "cpa": 20.0,
+        "cvr": 0.025,
+        "ctr": 0.0258,
+        "cpc": 0.5,
+        "aov": 120.0,
+        "frequency": 22.8571,
+        "spend_share": 0.0928,
+        "flags": [
+          "Scale candidate"
+        ]
+      },
+      {
+        "campaign": "Meta - New Collection",
+        "platform": "Meta",
+        "campaign_type": "Prospecting",
+        "spend": 560.0,
+        "revenue": 3080.0,
+        "purchases": 28.0,
+        "clicks": 1400.0,
+        "impressions": 97000.0,
+        "reach": 5100.0,
+        "is_brand": false,
+        "roas": 5.5,
+        "cpa": 20.0,
+        "cvr": 0.02,
+        "ctr": 0.0144,
+        "cpc": 0.4,
+        "aov": 110.0,
+        "frequency": 19.0196,
+        "spend_share": 0.0838,
+        "flags": [
+          "Scale candidate"
+        ]
+      },
+      {
+        "campaign": "Google Search - Evening",
+        "platform": "Google",
+        "campaign_type": "Search",
+        "spend": 490.0,
+        "revenue": 1540.0,
+        "purchases": 14.0,
+        "clicks": 700.0,
+        "impressions": 36000.0,
+        "reach": 1300.0,
+        "is_brand": false,
+        "roas": 3.1429,
+        "cpa": 35.0,
+        "cvr": 0.02,
+        "ctr": 0.0194,
+        "cpc": 0.7,
+        "aov": 110.0,
+        "frequency": 27.6923,
+        "spend_share": 0.0734,
+        "flags": []
+      },
+      {
+        "campaign": "Meta - Retargeting",
+        "platform": "Meta",
+        "campaign_type": "Retargeting",
+        "spend": 410.0,
+        "revenue": 3280.0,
+        "purchases": 41.0,
+        "clicks": 820.0,
+        "impressions": 52000.0,
+        "reach": 1750.0,
+        "is_brand": false,
+        "roas": 8.0,
+        "cpa": 10.0,
+        "cvr": 0.05,
+        "ctr": 0.0158,
+        "cpc": 0.5,
+        "aov": 80.0,
+        "frequency": 29.7143,
+        "spend_share": 0.0614,
+        "flags": [
+          "Scale candidate"
+        ]
+      },
+      {
+        "campaign": "Google Search - Brand",
+        "platform": "Google",
+        "campaign_type": "Search",
+        "spend": 240.0,
+        "revenue": 5760.0,
+        "purchases": 48.0,
+        "clicks": 960.0,
+        "impressions": 18500.0,
+        "reach": 650.0,
+        "is_brand": true,
+        "roas": 24.0,
+        "cpa": 5.0,
+        "cvr": 0.05,
+        "ctr": 0.0519,
+        "cpc": 0.25,
+        "aov": 120.0,
+        "frequency": 28.4615,
+        "spend_share": 0.0359,
+        "flags": [
+          "Branded (defends existing demand)"
+        ]
+      }
+    ]
+  },
+  "issues": [
+    {
+      "id": "ADS-01",
+      "area": "Ads",
+      "kind": "issue",
+      "priority": "P1",
+      "severity": "high",
+      "title": "Meta - Prospecting: 14% of budget with weak returns",
+      "detail": "It spent $950 and earned $2,090 from 19 purchases. ROAS is 2.20× against a target of 3.0×; only 1.00% of clicks convert versus 1.80% on average. Cost per purchase is $50. If it matched the non-brand average ROAS it would have earned about $1,815 more.",
+      "suggested_action": "Refresh the creative and narrow or rebuild audiences; pause the weakest ad sets and test one new angle at a time before spending more.",
+      "value_usd": 1814.736,
+      "entities": [
+        {
+          "campaign": "Meta - Prospecting",
+          "spend": 950.0,
+          "revenue": 2090.0,
+          "roas": 2.2,
+          "cvr": 0.01,
+          "cpa": 50.0,
+          "purchases": 19.0
+        }
+      ],
+      "entities_text": [
+        "Meta - Prospecting: $950 spend · $2,090 revenue · ROAS 2.20× · conv. rate 1.00% · CPA $50 · 19 purchases"
+      ]
+    },
+    {
+      "id": "SEO-02",
+      "area": "SEO",
+      "kind": "issue",
+      "priority": "P1",
+      "severity": "high",
+      "title": "3 well-ranked page(s) get far fewer clicks than their position should earn",
+      "detail": "These pages rank in the top 8 but their click-through rate is below 60% of the benchmark for their position. The biggest gap is Red Satin Evening Gown (P-102): 31,800 impressions at position 4.3 but only 3.0% CTR (benchmark ≈ 7.6%). Closing half of the gap on all of them is worth roughly 1,354 extra clicks per 28 days.",
+      "suggested_action": "Rewrite the title tags and meta descriptions to lead with the product's key attribute, price/offer and a clear call to action; add product schema (price, rating, availability) for rich results; A/B test and re-check CTR in 4 weeks.",
+      "value_usd": 1538.4825,
+      "entities": [
+        {
+          "product_id": "P-102",
+          "name": "Red Satin Evening Gown",
+          "impressions": 31800,
+          "position": 4.3,
+          "ctr": 0.03,
+          "expected_ctr": 0.0755,
+          "est_extra_clicks": 723.45
+        },
+        {
+          "product_id": "P-111",
+          "name": "Rose Gold Prom Dress",
+          "impressions": 27300,
+          "position": 5.6,
+          "ctr": 0.03,
+          "expected_ctr": 0.056,
+          "est_extra_clicks": 354.9
+        },
+        {
+          "product_id": "P-108",
+          "name": "Champagne Bridesmaid Dress",
+          "impressions": 15300,
+          "position": 3.8,
+          "ctr": 0.05,
+          "expected_ctr": 0.086,
+          "est_extra_clicks": 275.4
+        }
+      ],
+      "entities_text": [
+        "Red Satin Evening Gown (P-102): 31,800 impressions · position 4.3 · CTR 3.00% · benchmark 7.6% · ≈ +723 clicks",
+        "Rose Gold Prom Dress (P-111): 27,300 impressions · position 5.6 · CTR 3.00% · benchmark 5.6% · ≈ +355 clicks",
+        "Champagne Bridesmaid Dress (P-108): 15,300 impressions · position 3.8 · CTR 5.00% · benchmark 8.6% · ≈ +275 clicks"
+      ]
+    },
+    {
+      "id": "SEO-03",
+      "area": "SEO",
+      "kind": "issue",
+      "priority": "P1",
+      "severity": "high",
+      "title": "2 product page(s) flagged as not indexed",
+      "detail": "Navy Formal Dress (P-104), Long Sleeve Evening Dress (P-110) are marked as not indexed. Together they account for 12% of impressions (30,700) and 370 clicks. They still show 30,700 impressions, which is inconsistent with being unindexed, so the flag may be stale or the pages may have recently dropped out of the index.",
+      "suggested_action": "Check each URL in Google Search Console (URL Inspection) for noindex tags, canonical conflicts or robots.txt blocks, fix the cause and request re-indexing.",
+      "value_usd": 420.4901,
+      "entities": [
+        {
+          "product_id": "P-104",
+          "name": "Navy Formal Dress",
+          "impressions": 12600,
+          "clicks": 189,
+          "position": 8.9
+        },
+        {
+          "product_id": "P-110",
+          "name": "Long Sleeve Evening Dress",
+          "impressions": 18100,
+          "clicks": 181,
+          "position": 19.3
+        }
+      ],
+      "entities_text": [
+        "Navy Formal Dress (P-104): 12,600 impressions · 189 clicks · position 8.9",
+        "Long Sleeve Evening Dress (P-110): 18,100 impressions · 181 clicks · position 19.3"
+      ]
+    },
+    {
+      "id": "ADS-02",
+      "area": "Ads",
+      "kind": "issue",
+      "priority": "P2",
+      "severity": "medium",
+      "title": "Google Performance Max: 17% of budget with weak returns",
+      "detail": "It spent $1,120 and earned $3,640 from 28 purchases. ROAS is 3.25× versus a non-brand average of 4.11×; only 1.25% of clicks convert versus 1.80% on average. Cost per purchase is $40. If it matched the non-brand average ROAS it would have earned about $963 more.",
+      "suggested_action": "Review asset groups and listing groups, add brand/negative exclusions, and feed in stronger audience signals; cap budget until ROAS recovers.",
+      "value_usd": 963.4783,
+      "entities": [
+        {
+          "campaign": "Google Performance Max",
+          "spend": 1120.0,
+          "revenue": 3640.0,
+          "roas": 3.25,
+          "cvr": 0.0125,
+          "cpa": 40.0,
+          "purchases": 28.0
+        }
+      ],
+      "entities_text": [
+        "Google Performance Max: $1,120 spend · $3,640 revenue · ROAS 3.25× · conv. rate 1.25% · CPA $40 · 28 purchases"
+      ]
+    },
+    {
+      "id": "ADS-04",
+      "area": "Ads",
+      "kind": "issue",
+      "priority": "P2",
+      "severity": "medium",
+      "title": "Google Shopping - Dresses: 13% of budget with weak returns",
+      "detail": "It spent $880 and earned $2,860 from 22 purchases. ROAS is 3.25× versus a non-brand average of 4.11×; only 1.25% of clicks convert versus 1.80% on average. Cost per purchase is $40. If it matched the non-brand average ROAS it would have earned about $757 more.",
+      "suggested_action": "Audit the product feed (titles, prices, availability, images), exclude products that get clicks but never sell, and split high/low performers into separate bids.",
+      "value_usd": 757.0186,
+      "entities": [
+        {
+          "campaign": "Google Shopping - Dresses",
+          "spend": 880.0,
+          "revenue": 2860.0,
+          "roas": 3.25,
+          "cvr": 0.0125,
+          "cpa": 40.0,
+          "purchases": 22.0
+        }
+      ],
+      "entities_text": [
+        "Google Shopping - Dresses: $880 spend · $2,860 revenue · ROAS 3.25× · conv. rate 1.25% · CPA $40 · 22 purchases"
+      ]
+    },
+    {
+      "id": "SEO-04",
+      "area": "SEO",
+      "kind": "issue",
+      "priority": "P2",
+      "severity": "medium",
+      "title": "2 product page(s) have no description",
+      "detail": "Blue Cocktail Dress (P-103), Long Sleeve Evening Dress (P-110) have an empty description while receiving 39,500 impressions. Thin pages rank and convert worse.",
+      "suggested_action": "Write unique 100–150 word descriptions covering fabric, fit, occasion, sizing and care, and include the main search term naturally.",
+      "value_usd": null,
+      "entities": [
+        {
+          "product_id": "P-103",
+          "name": "Blue Cocktail Dress",
+          "impressions": 21400,
+          "position": 17.6
+        },
+        {
+          "product_id": "P-110",
+          "name": "Long Sleeve Evening Dress",
+          "impressions": 18100,
+          "position": 19.3
+        }
+      ],
+      "entities_text": [
+        "Blue Cocktail Dress (P-103): 21,400 impressions · position 17.6",
+        "Long Sleeve Evening Dress (P-110): 18,100 impressions · position 19.3"
+      ]
+    },
+    {
+      "id": "SEO-05",
+      "area": "SEO",
+      "kind": "issue",
+      "priority": "P2",
+      "severity": "medium",
+      "title": "4 page(s) load noticeably slower than the rest",
+      "detail": "Load time is more than 1.25× the median (65) for: Blue Cocktail Dress (91), Floral Maxi Dress (82), Long Sleeve Evening Dress (96), Ivory Formal Gown (88). Across all pages, slower load time goes with a worse ranking position (correlation 0.89); this is a correlation, not proof of cause.",
+      "suggested_action": "Compress and lazy-load product images, serve them in WebP/AVIF, remove unused scripts and re-test with PageSpeed Insights.",
+      "value_usd": null,
+      "entities": [
+        {
+          "product_id": "P-103",
+          "name": "Blue Cocktail Dress",
+          "page_load_ms": 91,
+          "position": 17.6
+        },
+        {
+          "product_id": "P-106",
+          "name": "Floral Maxi Dress",
+          "page_load_ms": 82,
+          "position": 14.2
+        },
+        {
+          "product_id": "P-110",
+          "name": "Long Sleeve Evening Dress",
+          "page_load_ms": 96,
+          "position": 19.3
+        },
+        {
+          "product_id": "P-112",
+          "name": "Ivory Formal Gown",
+          "page_load_ms": 88,
+          "position": 22.4
+        }
+      ],
+      "entities_text": [
+        "Blue Cocktail Dress (P-103): position 17.6 · load 91",
+        "Floral Maxi Dress (P-106): position 14.2 · load 82",
+        "Long Sleeve Evening Dress (P-110): position 19.3 · load 96",
+        "Ivory Formal Gown (P-112): position 22.4 · load 88"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "SEO-01",
+      "area": "SEO",
+      "kind": "opportunity",
+      "priority": "P1",
+      "severity": "high",
+      "title": "4 high-impression page(s) are stuck on page 2 of Google",
+      "detail": "These pages are shown often but rank between position 8 and 20, where few people click. Black Mermaid Prom Dress (P-101) has 52,000 impressions at position 11.8 and a 0.79% CTR. Moving these pages towards position 7 would add roughly 2,012 clicks per 28 days (assuming only half of the modelled gain is achieved).",
+      "suggested_action": "For each page: expand the product description with unique copy, strengthen internal links from category and blog pages, improve the title for the main keyword, and earn a few relevant backlinks. Start with the page with the largest impression count.",
+      "value_usd": 2285.9889,
+      "entities": [
+        {
+          "product_id": "P-101",
+          "name": "Black Mermaid Prom Dress",
+          "impressions": 52000,
+          "position": 11.8,
+          "ctr": 0.0079,
+          "est_extra_clicks": 835.0
+        },
+        {
+          "product_id": "P-107",
+          "name": "Black Off Shoulder Gown",
+          "impressions": 44000,
+          "position": 13.1,
+          "ctr": 0.007,
+          "est_extra_clicks": 726.0
+        },
+        {
+          "product_id": "P-103",
+          "name": "Blue Cocktail Dress",
+          "impressions": 21400,
+          "position": 17.6,
+          "ctr": 0.005,
+          "est_extra_clicks": 374.5
+        },
+        {
+          "product_id": "P-106",
+          "name": "Floral Maxi Dress",
+          "impressions": 7600,
+          "position": 14.2,
+          "ctr": 0.02,
+          "est_extra_clicks": 76.0
+        }
+      ],
+      "entities_text": [
+        "Black Mermaid Prom Dress (P-101): 52,000 impressions · position 11.8 · CTR 0.79% · ≈ +835 clicks",
+        "Black Off Shoulder Gown (P-107): 44,000 impressions · position 13.1 · CTR 0.70% · ≈ +726 clicks",
+        "Blue Cocktail Dress (P-103): 21,400 impressions · position 17.6 · CTR 0.50% · ≈ +375 clicks",
+        "Floral Maxi Dress (P-106): 7,600 impressions · position 14.2 · CTR 2.00% · ≈ +76 clicks"
+      ]
+    },
+    {
+      "id": "ADS-03",
+      "area": "Ads",
+      "kind": "opportunity",
+      "priority": "P2",
+      "severity": "medium",
+      "title": "Shift budget from 3 weak campaign(s) to proven performers",
+      "detail": "Campaigns with the best returns: Meta - Retargeting (8.0×), Google Search - Prom (6.0×), Meta - Sale Creative (5.5×), Meta - New Collection (5.5×). Weak campaigns: Google Performance Max, Meta - Prospecting, Google Shopping - Dresses (combined ROAS 2.91×). Moving 20% of the weak campaigns' budget (about $590) to the winners, assuming extra spend earns only 70% of their average ROAS, would add roughly $796 of revenue for the same total spend. Branded search is excluded because it mostly captures demand that already exists; retargeting can only scale as far as its audience allows.",
+      "suggested_action": "Move budget in steps of about 10–20% every week, watch ROAS and CPA after each step, and stop increasing a campaign when its ROAS falls toward the target.",
+      "value_usd": 796.3877,
+      "entities": [
+        {
+          "campaign": "Meta - Sale Creative",
+          "role": "scale",
+          "roas": 5.5,
+          "spend": 680.0
+        },
+        {
+          "campaign": "Google Search - Prom",
+          "role": "scale",
+          "roas": 6.0,
+          "spend": 620.0
+        },
+        {
+          "campaign": "Meta - New Collection",
+          "role": "scale",
+          "roas": 5.5,
+          "spend": 560.0
+        },
+        {
+          "campaign": "Meta - Retargeting",
+          "role": "scale",
+          "roas": 8.0,
+          "spend": 410.0
+        },
+        {
+          "campaign": "Google Performance Max",
+          "role": "reduce",
+          "roas": 3.25,
+          "spend": 1120.0
+        },
+        {
+          "campaign": "Meta - Prospecting",
+          "role": "reduce",
+          "roas": 2.2,
+          "spend": 950.0
+        },
+        {
+          "campaign": "Google Shopping - Dresses",
+          "role": "reduce",
+          "roas": 3.25,
+          "spend": 880.0
+        }
+      ],
+      "entities_text": [
+        "Meta - Sale Creative: [scale] · $680 spend · ROAS 5.50×",
+        "Google Search - Prom: [scale] · $620 spend · ROAS 6.00×",
+        "Meta - New Collection: [scale] · $560 spend · ROAS 5.50×",
+        "Meta - Retargeting: [scale] · $410 spend · ROAS 8.00×",
+        "Google Performance Max: [reduce] · $1,120 spend · ROAS 3.25×",
+        "Meta - Prospecting: [reduce] · $950 spend · ROAS 2.20×",
+        "Google Shopping - Dresses: [reduce] · $880 spend · ROAS 3.25×"
+      ]
+    },
+    {
+      "id": "SEO-06",
+      "area": "SEO",
+      "kind": "opportunity",
+      "priority": "P2",
+      "severity": "medium",
+      "title": "Possible keyword overlap: Black Mermaid Prom Dress vs Black Off Shoulder Gown",
+      "detail": "Both pages are in 'Prom Dresses' and share much of the same wording (black, off, prom, shoulder), so they may compete for the same searches. Positions are 11.8 and 13.1 with 96,000 combined impressions. This is a hypothesis based on text similarity only.",
+      "suggested_action": "Give each page a distinct primary keyword and angle (e.g. silhouette, neckline or occasion), cross-link them, or consolidate them if they are near-duplicates.",
+      "value_usd": null,
+      "entities": [
+        {
+          "product_id": "P-101",
+          "name": "Black Mermaid Prom Dress",
+          "impressions": 52000,
+          "position": 11.8
+        },
+        {
+          "product_id": "P-107",
+          "name": "Black Off Shoulder Gown",
+          "impressions": 44000,
+          "position": 13.1
+        }
+      ],
+      "entities_text": [
+        "Black Mermaid Prom Dress (P-101): 52,000 impressions · position 11.8",
+        "Black Off Shoulder Gown (P-107): 44,000 impressions · position 13.1"
+      ]
+    },
+    {
+      "id": "X-01",
+      "area": "Cross-channel",
+      "kind": "opportunity",
+      "priority": "P2",
+      "severity": "medium",
+      "title": "Paid search 'Google Search - Prom' overlaps with organic gaps in Prom Dresses",
+      "detail": "You spend $620 (ROAS 6.00×) on paid search for this theme while 2 of 3 organic pages in 'Prom Dresses' are on page 2 or not indexed: Black Mermaid Prom Dress (pos 11.8), Black Off Shoulder Gown (pos 13.1). These pages hold 78% of the category's 123,300 organic impressions.",
+      "suggested_action": "Keep the paid campaign running while it is profitable, but treat these organic pages as a priority so free traffic gradually replaces paid clicks.",
+      "value_usd": null,
+      "entities": [
+        {
+          "product_id": "P-101",
+          "name": "Black Mermaid Prom Dress",
+          "position": 11.8,
+          "impressions": 52000,
+          "not_indexed": false
+        },
+        {
+          "product_id": "P-107",
+          "name": "Black Off Shoulder Gown",
+          "position": 13.1,
+          "impressions": 44000,
+          "not_indexed": false
+        }
+      ],
+      "entities_text": [
+        "Black Mermaid Prom Dress (P-101): 52,000 impressions · position 11.8",
+        "Black Off Shoulder Gown (P-107): 44,000 impressions · position 13.1"
+      ]
+    },
+    {
+      "id": "ADS-05",
+      "area": "Ads",
+      "kind": "opportunity",
+      "priority": "P3",
+      "severity": "low",
+      "title": "Prospecting campaigns vary widely: 2.2× to 5.5× ROAS",
+      "detail": "Within Prospecting, Meta - Sale Creative returns 5.50× while Meta - Prospecting returns 2.20× on $950 of spend. The difference is probably creative, offer or audience rather than the channel itself.",
+      "suggested_action": "Identify what Meta - Sale Creative does differently (offer, creative, audience) and test the same approach in Meta - Prospecting.",
+      "value_usd": null,
+      "entities": [
+        {
+          "campaign": "Meta - Sale Creative",
+          "roas": 5.5,
+          "spend": 680.0
+        },
+        {
+          "campaign": "Meta - New Collection",
+          "roas": 5.5,
+          "spend": 560.0
+        },
+        {
+          "campaign": "Meta - Lookalike",
+          "roas": 3.4521,
+          "spend": 730.0
+        },
+        {
+          "campaign": "Meta - Prospecting",
+          "roas": 2.2,
+          "spend": 950.0
+        }
+      ],
+      "entities_text": [
+        "Meta - Sale Creative: $680 spend · ROAS 5.50×",
+        "Meta - New Collection: $560 spend · ROAS 5.50×",
+        "Meta - Lookalike: $730 spend · ROAS 3.45×",
+        "Meta - Prospecting: $950 spend · ROAS 2.20×"
+      ]
+    },
+    {
+      "id": "X-02",
+      "area": "Cross-channel",
+      "kind": "opportunity",
+      "priority": "P3",
+      "severity": "low",
+      "title": "Paid search 'Google Search - Evening' overlaps with organic gaps in Evening Dresses",
+      "detail": "You spend $490 (ROAS 3.14×) on paid search for this theme while 1 of 2 organic pages in 'Evening Dresses' are on page 2 or not indexed: Long Sleeve Evening Dress (not indexed). These pages hold 36% of the category's 49,900 organic impressions.",
+      "suggested_action": "Keep the paid campaign running while it is profitable, but treat these organic pages as a priority so free traffic gradually replaces paid clicks.",
+      "value_usd": null,
+      "entities": [
+        {
+          "product_id": "P-110",
+          "name": "Long Sleeve Evening Dress",
+          "position": 19.3,
+          "impressions": 18100,
+          "not_indexed": true
+        }
+      ],
+      "entities_text": [
+        "Long Sleeve Evening Dress (P-110): 18,100 impressions · position 19.3 · not indexed"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "P1",
+      "title": "Fix and refresh Meta - Prospecting campaign",
+      "action": "Refresh the creative and narrow or rebuild audiences; pause the weakest ad sets and test one new angle at a time before spending more.",
+      "why": "Meta - Prospecting spent $950 and earned $2,090, achieving a ROAS of 2.20× against your 3.0× target, with a high cost per purchase of $50 and a conversion rate of only 1.00%.",
+      "expected_impact": "Improve ROAS toward your 3.0× target and capture roughly $1,815 more in revenue if it matches non-brand averages.",
+      "effort": "medium",
+      "related_findings": [
+        "ADS-01"
+      ]
+    },
+    {
+      "priority": "P1",
+      "title": "Optimize metadata for high-ranking pages with low click-through rates",
+      "action": "Rewrite title tags and meta descriptions to lead with key attributes, price/offers, and clear calls to action. Add product schema (price, rating, availability) for rich results and A/B test.",
+      "why": "Red Satin Evening Gown (P-102) gets 31,800 impressions at position 4.3 but only a 3.0% CTR (compared to a benchmark of roughly 7.6%). Rose Gold Prom Dress (P-111) and Champagne Bridesmaid Dress (P-108) also suffer from low CTR for their strong ranks.",
+      "expected_impact": "Close roughly half of the CTR gap across these pages to gain roughly 1,354 extra clicks per 28 days.",
+      "effort": "low",
+      "related_findings": [
+        "SEO-02"
+      ]
+    },
+    {
+      "priority": "P1",
+      "title": "Push page 2 product pages to page 1",
+      "action": "Expand product descriptions with unique copy, strengthen internal links from category and blog pages, improve titles for main keywords, and earn a few relevant backlinks, starting with Black Mermaid Prom Dress (P-101).",
+      "why": "Pages like Black Mermaid Prom Dress (P-101) have 52,000 impressions at position 11.8 (0.79% CTR), and Black Off Shoulder Gown (P-107) has 44,000 impressions at position 13.1, leaving massive traffic trapped on page 2.",
+      "expected_impact": "Moving these pages toward position 7 can add roughly 2,012 clicks per 28 days.",
+      "effort": "medium",
+      "related_findings": [
+        "SEO-01"
+      ]
+    },
+    {
+      "priority": "P1",
+      "title": "Investigate and re-index unindexed product pages",
+      "action": "Check URLs in Google Search Console (URL Inspection) for noindex tags, canonical conflicts, or robots.txt blocks for Navy Formal Dress (P-104) and Long Sleeve Evening Dress (P-110). Fix the cause and request re-indexing.",
+      "why": "Navy Formal Dress (P-104) and Long Sleeve Evening Dress (P-110) are marked as not indexed while accounting for 30,700 impressions and 370 clicks.",
+      "expected_impact": "Recover full indexing status and capture an estimated $420.49 in potential value.",
+      "effort": "low",
+      "related_findings": [
+        "SEO-03"
+      ]
+    },
+    {
+      "priority": "P2",
+      "title": "Restructure and optimize Google Performance Max",
+      "action": "Review asset groups and listing groups, add brand/negative exclusions, and feed in stronger audience signals; cap budget until ROAS recovers.",
+      "why": "Google Performance Max spent $1,120 and generated $3,640 (3.25× ROAS) with a weak conversion rate of 1.25% and a $40 cost per purchase.",
+      "expected_impact": "Align ROAS closer to the non-brand average of 4.11× and unlock roughly $963 in additional revenue.",
+      "effort": "medium",
+      "related_findings": [
+        "ADS-02"
+      ]
+    },
+    {
+      "priority": "P2",
+      "title": "Shift budget from weak ad campaigns to top performers",
+      "action": "Move budget in steps of 10–20% weekly away from Google Performance Max ($1,120 spend, 3.25× ROAS), Meta - Prospecting ($950 spend, 2.20× ROAS), and Google Shopping ($880 spend, 3.25× ROAS). Allocate these funds into winners like Meta - Retargeting (8.0× ROAS), Google Search - Prom (6.0× ROAS), Meta - Sale Creative (5.5× ROAS), and Meta - New Collection (5.5× ROAS). Watch ROAS and CPA closely after each step.",
+      "why": "Weak campaigns are dragging down overall efficiency, whereas top-tier campaigns consistently deliver much higher returns on the same total spend.",
+      "expected_impact": "Shift roughly $590 of budget to generate roughly $796 in extra revenue for the same total ad spend.",
+      "effort": "medium",
+      "related_findings": [
+        "ADS-03"
+      ]
+    },
+    {
+      "priority": "P2",
+      "title": "Audit and optimize the Google Shopping product feed",
+      "action": "Audit product titles, prices, availability, and images in the Google Shopping - Dresses campaign ($880 spend, 3.25× ROAS). Exclude products that get clicks but never sell, and split high and low performers into separate bids.",
+      "why": "Google Shopping - Dresses underperforms the non-brand average ROAS of 4.11×, achieving only a 1.25% conversion rate and a $40 cost per purchase.",
+      "expected_impact": "Close the performance gap toward the non-brand average, potentially earning roughly $757 more in revenue.",
+      "effort": "medium",
+      "related_findings": [
+        "ADS-04"
+      ]
+    },
+    {
+      "priority": "P2",
+      "title": "Add descriptions and fix load times for thin product pages",
+      "action": "Write unique 100–150 word descriptions covering fabric, fit, occasion, sizing, and care for Blue Cocktail Dress (P-103) and Long Sleeve Evening Dress (P-110). Simultaneously compress and lazy-load images, serve them in WebP/AVIF format, and remove unused scripts for slow-loading pages (P-103, P-106, P-110, P-112).",
+      "why": "Blue Cocktail Dress (P-103) and Long Sleeve Evening Dress (P-110) currently have empty descriptions while receiving 39,500 impressions, and slower pages exhibit strong correlation with poor ranking positions.",
+      "expected_impact": "Improve user engagement, conversion readiness, and organic ranking visibility across these thin and slow-loading product pages.",
+      "effort": "medium",
+      "related_findings": [
+        "SEO-04",
+        "SEO-05"
+      ]
+    }
+  ],
+  "changes_since_previous": null,
+  "data_quality": {
+    "seo": [
+      "SEO: 2 page(s) have an empty description (P-103, P-110) – kept and flagged as a content issue.",
+      "SEO: page_load_ms values are very small (median 65) for milliseconds. Load times are compared with each other only; please confirm the unit of this column."
+    ],
+    "ads": []
+  },
+  "assumptions": {
+    "thresholds": {
+      "target_roas": 3.0,
+      "par_gap_ratio": 0.7,
+      "high_spend_share": 0.1,
+      "low_cvr_ratio": 0.75,
+      "scale_roas_ratio": 1.25,
+      "scale_min_purchases": 20,
+      "reallocation_share": 0.2,
+      "scale_marginal_efficiency": 0.7,
+      "spread_ratio": 2.0,
+      "brand_keywords": [
+        "brand"
+      ],
+      "min_impressions": 5000,
+      "ctr_underperform_ratio": 0.6,
+      "striking_min_pos": 8.0,
+      "striking_max_pos": 20.0,
+      "striking_target_pos": 7.0,
+      "gap_closure": 0.5,
+      "slow_page_ratio": 1.25,
+      "cannibalization_similarity": 0.35,
+      "organic_value_factor": 0.5,
+      "trend_change_pct": 15.0,
+      "trend_min_clicks": 20
+    },
+    "benchmark_ctr_by_position": [
+      {
+        "position": 1,
+        "ctr": 0.28
+      },
+      {
+        "position": 2,
+        "ctr": 0.15
+      },
+      {
+        "position": 3,
+        "ctr": 0.11
+      },
+      {
+        "position": 4,
+        "ctr": 0.08
+      },
+      {
+        "position": 5,
+        "ctr": 0.065
+      },
+      {
+        "position": 6,
+        "ctr": 0.05
+      },
+      {
+        "position": 7,
+        "ctr": 0.04
+      },
+      {
+        "position": 8,
+        "ctr": 0.032
+      },
+      {
+        "position": 9,
+        "ctr": 0.027
+      },
+      {
+        "position": 10,
+        "ctr": 0.022
+      },
+      {
+        "position": 15,
+        "ctr": 0.01
+      },
+      {
+        "position": 20,
+        "ctr": 0.006
+      },
+      {
+        "position": 30,
+        "ctr": 0.003
+      }
+    ],
+    "organic_click_value_usd": 1.1365,
+    "note": "Revenue figures for findings are modelled estimates, overlap between findings is possible, and they should not be added together."
+  }
+}
